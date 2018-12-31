@@ -1,0 +1,15 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./electron.starter.prod.js",
+  "scripts": {
+    "postinstall": "npm rebuild --runtime=electron --target=4.0.0 --disturl=https://atom.io/download/atom-shell --build-from-source"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sequelize": "^4.42.0",
+    "sqlite3": "^4.0.4"
+  }
+}

@@ -1,0 +1,19 @@
+.todo-modal-container {
+	width: 300px;
+	height: 300px;
+}
+
+.todo-modal-close-btn {
+	right: 0px;
+	position: absolute;
+	background-color: transparent;
+	color: #001e38;
+	font-size: 20px;
+}
+
+.todo-modal-row {
+	margin: 10px 15px;
+	input {
+		padding: 5px;
+	}
+}

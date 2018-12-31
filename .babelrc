@@ -1,0 +1,16 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": { "node": 6 },
+        "useBuiltIns": "true"
+      }
+    ],
+    "@babel/preset-react",
+    "@babel/preset-stage-0"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties"
+  ]
+}
