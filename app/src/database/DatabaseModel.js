@@ -1,8 +1,8 @@
 import path from 'path';
 import { remote } from 'electron';
 import fs from 'fs';
+import TodoModel from './Todo';
 
-//let sqlite3 = require('sqlite3').verbose();
 
 /**
  * TODO:
@@ -34,3 +34,5 @@ sequelize.sync({force: false})
   .then(() => {
     console.log('Database & tables created!');
   });
+
+  export const Todo = TodoModel(sequelize, Sequelize);

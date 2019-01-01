@@ -6,18 +6,17 @@ import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
 const TodoListView = props => {
-  const { types } = props;
-
+  const { todoItems } = props;
   return (
-    <div className="container">
-      {types.map(item => (
+    <div className="container" onDrop={props.handleOnDrop}>
+      {todoItems.map(item => (
         <div
-          key={item}
+          key={item.todoId}
           className="todo-list-container"
-          onDrop={props.handleOnDrop}
+          draggable
+          onDrag={props.handleOnDrag(item)}
         >
-          <div className="title">{item}</div>
-          <TodoItemContainer />
+          <TodoItemContainer todoItem={item} />
         </div>
       ))}
       <div>
@@ -30,8 +29,9 @@ const TodoListView = props => {
 };
 
 TodoListView.propTypes = {
-  types: PropTypes.array,
+  todoItems: PropTypes.array,
   handleOnDrop: PropTypes.func,
+  handleOnDrag: PropTypes.func,
   openTodoForm: PropTypes.func
 };
 

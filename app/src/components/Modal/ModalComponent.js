@@ -68,7 +68,6 @@ class ModalComponent extends React.Component {
     });
   }
   handleSubmit(event) {
-    console.log('go here');
     console.log(this.state);
     event.preventDefault();
   }

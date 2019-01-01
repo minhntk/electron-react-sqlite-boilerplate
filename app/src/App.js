@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import TodoListContainer from './components/TodoList/TodoListContainer';
 import { Provider } from 'react-redux';
 import store from './configureStore';
@@ -13,9 +12,9 @@ class App extends Component {
 
   render() {
     return (
-			<Provider store={store}>
-			<TodoListContainer />
-		</Provider>
+      <Provider store={store}>
+        <TodoListContainer />
+      </Provider>
     );
   }
 }
