@@ -63,6 +63,7 @@
     "lodash": "^4.17.11",
     "mkdirp": "^0.5.1",
     "react": "^16.7.0",
+    "react-beautiful-dnd": "^10.0.3",
     "react-dom": "^16.7.0",
     "react-draft-wysiwyg": "^1.12.18",
     "react-modal": "^3.8.1",

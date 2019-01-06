@@ -5,23 +5,17 @@ import TodoItemView from './TodoItemView';
 export default class TodoContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.onDrag = this.onDrag.bind(this);
-  }
-
-  onDrag = (item) => (event) => {
-    event.preventDefault();
-    console.log(item);
   }
 
   render() {
-    const { todoItem } = this.props;
+    const { todoItem, statusItem } = this.props;
     return (
-      <TodoItemView todoItem={todoItem}  />
+      <TodoItemView todoItem={todoItem} statusItem={statusItem} />
     );
-
   }
 }
 
 TodoContainer.propTypes = {
-  todoItem: PropTypes.object
+  todoItem: PropTypes.object,
+  statusItem: PropTypes.object
 };

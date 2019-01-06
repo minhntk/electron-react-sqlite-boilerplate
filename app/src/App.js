@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TodoListContainer from './components/TodoList/TodoListContainer';
+import DashboardContainer from './components/Dashboard/DashboardContainer';
 import { Provider } from 'react-redux';
 import store from './configureStore';
 import Modal from 'react-modal';
@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <TodoListContainer />
+        <DashboardContainer />
       </Provider>
     );
   }

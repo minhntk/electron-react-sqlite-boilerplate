@@ -2,6 +2,7 @@ import path from 'path';
 import { remote } from 'electron';
 import fs from 'fs';
 import TodoModel from './Todo';
+import StatusModel from './Status';
 
 
 /**
@@ -35,4 +36,5 @@ sequelize.sync({force: false})
     console.log('Database & tables created!');
   });
 
-  export const Todo = TodoModel(sequelize, Sequelize);
+export const Todo = TodoModel(sequelize, Sequelize);
+export const Status = StatusModel(sequelize, Sequelize);

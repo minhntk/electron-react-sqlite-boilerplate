@@ -1,19 +1,11 @@
-const TodoModel = (sequelize, type) => {
-  return sequelize.define('todo', {
-    todoId: {
+const StatusModel = (sequelize, type) => {
+  return sequelize.define('status', {
+    statusId: {
       type: type.STRING,
       allowNull: false,
       primaryKey: true,
     },
-    title: {
-      type: type.STRING,
-      allowNull: false
-    },
-    description: {
-      type: type.STRING,
-      allowNull: false
-    },
-    assignee: {
+    text: {
       type: type.STRING,
       allowNull: false
     },
@@ -21,7 +13,7 @@ const TodoModel = (sequelize, type) => {
       type: type.STRING,
       allowNull: false
     },
-    statusId: {
+    color: {
       type: type.STRING,
       allowNull: false
     },
@@ -36,4 +28,4 @@ const TodoModel = (sequelize, type) => {
   });
 };
 
-export default TodoModel;
+export default StatusModel;
